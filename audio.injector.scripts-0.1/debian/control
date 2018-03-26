@@ -1,0 +1,16 @@
+Source: audio.injector.scripts
+Section: unknown
+Priority: optional
+Maintainer: Matt <audioinjector@audioinjector.net>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: http://www.audioinjector.net/#!/rpi-hat
+
+Package: audio.injector.scripts
+Architecture: all
+Depends: ${misc:Depends}
+Description: Setup, default mixer settings and test scripts for the Audio Injector
+ These scripts will allow you to setup your Audio Injector Sound card for the raspberry Pi.
+ There is also a test script which tests RCA out to input and headphone out to mic input.
+ The test script uses different mixer settings to allow the test to happen. These
+ mixer settings are stored in the /usr/share/doc/audioInjector path.

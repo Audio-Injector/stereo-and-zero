@@ -1,0 +1,5 @@
+audioInjector-setup.sh usr/bin/
+audioInjector-test.sh usr/bin/
+asound.state.RCA.thru.test usr/share/doc/audioInjector/
+asound.state.MIC.thru.test usr/share/doc/audioInjector/
+

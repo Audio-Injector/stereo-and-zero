@@ -1,0 +1,5 @@
+audio.injector.scripts (0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Matt Flax <flatmax@unknown>  Wed, 29 Jun 2016 16:42:23 +1000
