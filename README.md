@@ -10,16 +10,20 @@ To setup your system (if you want to do this manually, look at the end of this m
 I have some scripts which allow you to easily setup your /boot/config.txt to load the correct audio injector device tree. The raspbian inastallable .deb package is available from the link below, download and install it.
 https://github.com/Audio-Injector/stereo-and-zero/raw/master/audio.injector.scripts_0.1-1_all.deb
 
-1 Download and install the attached deb file.
+1. Download and install the attached deb file.
 
-2 Run audioInjector-setup.sh command from the command line (by typing it in and pressing return).
-  audioInjector-setup.sh
+2. Run audioInjector-setup.sh command from the command line (by typing it in and pressing return).
+```
+audioInjector-setup.sh
+```  
 This script will update your firmware firstly (by running rpi-update) and then alter your /boot/config.txt file to add the device tree to load (dtoverlay=audioinjector-wm8731-audio).
 3.Reboot to force the correct device tree to load.
 
 # Mixer settings
 Turn up the manual volume control knobs on the card - to a desired level !
+
 Included are also two reference alsa mixer files which will allow you to setup default output with either line input or microphone input :
+
 * asound.state.MIC.thru.test : This will setup the microphone as the input and also setup the output. Run
 ```
 alsactl --file /usr/share/doc/audioInjector/asound.state.MIC.thru.test restore
