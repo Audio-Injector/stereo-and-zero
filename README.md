@@ -17,6 +17,7 @@ https://github.com/Audio-Injector/stereo-and-zero/raw/master/audio.injector.scri
 audioInjector-setup.sh
 ```  
 This script will update your firmware firstly (by running rpi-update) and then alter your /boot/config.txt file to add the device tree to load (dtoverlay=audioinjector-wm8731-audio).
+
 3.Reboot to force the correct device tree to load.
 
 # Mixer settings
