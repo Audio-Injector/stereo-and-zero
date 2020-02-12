@@ -3,13 +3,18 @@
 [If you want to discuss these products, or topics around hearing, acoustics and audio, join the audio injector email list.](https://lists.audioinjector.net/mailman/listinfo/people)
 
 # setup
+
+To setup your system (if you want to do this manually, look at the end of this message) :
+
+# Automated setup method
 I have some scripts which allow you to easily setup your /boot/config.txt to load the correct audio injector device tree. The raspbian inastallable .deb package is available from the link below, download and install it.
 https://github.com/Audio-Injector/stereo-and-zero/raw/master/audio.injector.scripts_0.1-1_all.deb
 
-To setup your system (if you want to do this manually, look at the end of this message) :
-# Automated setup method
-1.Download and install the attached deb file.
-2.Run audioInjector-setup.sh command from the command line (by typing it in and pressing return).[code]audioInjector-setup.sh[/code] This script will update your firmware firstly (by running rpi-update) and then alter your /boot/config.txt file to add the device tree to load (dtoverlay=audioinjector-wm8731-audio).
+1 Download and install the attached deb file.
+
+2 Run audioInjector-setup.sh command from the command line (by typing it in and pressing return).
+  audioInjector-setup.sh
+This script will update your firmware firstly (by running rpi-update) and then alter your /boot/config.txt file to add the device tree to load (dtoverlay=audioinjector-wm8731-audio).
 3.Reboot to force the correct device tree to load.
 
 # Mixer settings
