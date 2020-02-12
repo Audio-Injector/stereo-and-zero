@@ -1,6 +1,6 @@
 # stereo and zero
 
-Check the audio injector email list : https://lists.audioinjector.net/mailman/listinfo/people
+[If you want to discuss these products, or topics around hearing, acoustics and audio, join the audio injector email list.](https://lists.audioinjector.net/mailman/listinfo/people)
 
 # setup
 I have some scripts which allow you to easily setup your /boot/config.txt to load the correct audio injector device tree. The raspbian inastallable .deb package is available from the link below, download and install it.
