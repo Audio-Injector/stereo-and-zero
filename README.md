@@ -20,6 +20,8 @@ This script will update your firmware firstly (by running rpi-update) and then a
 
 3. Reboot to force the correct device tree to load.
 
+4. Don't forget to enable the output HiFi mixer using alsamixer or this on the commandline : amixer set 'Output Mixer HiFi' on
+
 # Mixer settings
 Turn up the manual volume control knobs on the card - to a desired level !
 
