@@ -39,14 +39,21 @@ This script will update your firmware firstly (by running rpi-update) and then a
 # Mixer settings
 Turn up the manual volume control knobs on the card - to a desired level !
 
+NOTE : Find the files mentioned in this section here : https://github.com/Audio-Injector/stereo-and-zero/tree/master/audio.injector.scripts-0.1
+Store the asound.*.test mixer setting files in /usr/share/doc/audioInjector to run the audioInjector-test.sh file.
+
 Included are also two reference alsa mixer files which will allow you to setup default output with either line input or microphone input :
 
 * asound.state.MIC.thru.test : This will setup the microphone as the input and also setup the output. Run
 ```
+alsactl --file asound.state.MIC.thru.test restore
+# if you put the file in /usr/share/doc/audioInjector 
 alsactl --file /usr/share/doc/audioInjector/asound.state.MIC.thru.test restore
 ```
 * asound.state.RCA.thru.test : This will setup the RCA lines as the input and also setup the output. Run
 ```
+alsactl --file asound.state.RCA.thru.test restore
+# if you put the file in /usr/share/doc/audioInjector 
 alsactl --file /usr/share/doc/audioInjector/asound.state.RCA.thru.test restore
 ```
 
