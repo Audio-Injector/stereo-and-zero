@@ -6,7 +6,21 @@
 
 To setup your system (if you want to do this manually, look at the end of this message) :
 
+NOTE 
+
+New versions of raspbian have a non-robust configuration of pulseaudio installed. You should probably skip the autoinstall method and use the manual installation method - which removes pulseaudio first.
+
+END NOTE
+
+# Manual setup method
+* Uninstall pulseaudio first - current Rasbian releases have a non-robust config for it and it breaks operation : sudo apt remove pulseaudio
+* Make sure the default audio device tree is not loaded for PWM output (/boot/config.txt), this is because it uses the same I2S bus. (Comment out dtparam=audio=on)
+* Make sure the Audio Injector device tree is loaded at boot time : dtoverlay=audioinjector-wm8731-audio
+* Reboot to force the correct device tree to load.
+
 # Automated setup method
+NOTE : People are reporting that non-robust pulseaudio configuration is creating problems with the auto-installation method, if you have problems (with newer Rasbian releases, you should perform the manual installation method below).
+
 I have some scripts which allow you to easily setup your /boot/config.txt to load the correct audio injector device tree. The raspbian inastallable .deb package is available from the link below, download and install it.
 https://github.com/Audio-Injector/stereo-and-zero/raw/master/audio.injector.scripts_0.1-1_all.deb
 
@@ -43,9 +57,3 @@ audioInjector-test.sh
 ```
 It should plot the spectrograms which show the pulsing 10 kHz signal :
 ![spectrogram example](https://github.com/Audio-Injector/stereo-and-zero/blob/master/stereo.test.png)
-
-# Manual setup method
-* Ensure you have the latest kernel : sudo rpi-update
-* Make sure the default audio device tree is not loaded for PWM output (/boot/config.txt), this is because it uses the same I2S bus. (Comment out dtparam=audio=on)
-* Make sure the Audio Injector device tree is loaded at boot time : dtoverlay=audioinjector-wm8731-audio
-* Reboot to force the correct device tree to load.
