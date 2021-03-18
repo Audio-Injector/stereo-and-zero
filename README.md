@@ -4,7 +4,7 @@
 
 # setup
 
-To setup your system (if you want to do this manually, look at the end of this message) :
+To setup your system :
 
 NOTE 
 
