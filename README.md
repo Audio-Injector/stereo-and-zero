@@ -3,6 +3,45 @@
 [If you want to discuss these products, or topics around hearing, acoustics and audio, join the audio injector email list.](https://lists.audioinjector.net/mailman/listinfo/people)
 
 # setup
+Upon recently testing Rasbian (2022-01-28 version) I was happy to find that setting up audio has become much easier. We can even keep pulseaudio operating which is the default and simplest approach for new users.
+
+## Alter /boot/config.txt
+
+The first thing to do is to update boot.txt using an editor, like nano :
+* nano /boot/config.txt
+* Add this to the end of the file : dtoverlay=audioinjector-wm8731-audio
+
+Mine looks like this (using the tail command) :
+```
+pi@raspberrypi:~ $ tail -n1 /boot/config.txt 
+dtoverlay=audioinjector-wm8731-audio
+```
+
+Once that is done, reboot. You should be able to see your sound card :
+```
+pi@raspberrypi:~ $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+[ SNIP ]
+card 2: audioinjectorpi [audioinjector-pi-soundcard], device 0: AudioInjector audio wm8731-hifi-0 [AudioInjector audio wm8731-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+```
+## Enable "Output Mixer HiFi"
+If you want to do this using alsamixer, run that command from the terminal, press F6 on your keyboard and select the correct audioinjector soundcard. Next use the L+R arrow keys to navigate to the "Output Mixer HiFi" control and press "m" on the keyboard to change its state from mute ("MM") to on ("OO").
+
+Another way to do this is to use the amixer command line :
+```
+amixer -D hw:CARD=audioinjectorpi set 'Output Mixer HiFi' unmute
+```
+
+
+## Setup pulse audio to use the audio injector as output
+Right click on the sound icon on the top right of the screen and in the outputs section, go to "Audio Outputs" and select the audio injector soundcard as the output.
+
+# OLD NOTES BELOW
+
+# setup
 
 To setup your system :
 
