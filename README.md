@@ -39,6 +39,14 @@ amixer -D hw:CARD=audioinjectorpi set 'Output Mixer HiFi' unmute
 ## Setup pulse audio to use the audio injector as output
 Right click on the sound icon on the top right of the screen and in the outputs section, go to "Audio Outputs" and select the audio injector soundcard as the output.
 
+
+
+#
+#
+#
+#
+
+
 # OLD NOTES BELOW
 
 # setup
