@@ -16,6 +16,7 @@ Mine looks like this (using the tail command) :
 pi@raspberrypi:~ $ tail -n1 /boot/config.txt 
 dtoverlay=audioinjector-wm8731-audio
 ```
+On Debian Bookworm, this file has been moved to /boot/firmware/config.txt
 
 Once that is done, reboot. You should be able to see your sound card :
 ```
